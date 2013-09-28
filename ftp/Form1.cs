@@ -12,7 +12,9 @@ using System.IO;
 namespace ftp
 {
     public partial class Form1 : Form
-    {       
+    {
+        bool isAttExisted = false;
+        string attachment;
         public Form1()
         {
             InitializeComponent();
@@ -136,6 +138,21 @@ namespace ftp
             }
             sw.Close();
             UploadSmall(".\\" + filename, "feedback", "59.66.133.208", "ftp1", "myftp47myftp");
+            if (isAttExisted)
+                UploadSmall(attachment, "feedback", "59.66.133.208", "ftp1", "myftp47myftp");
+            MessageBox.Show("提交成功，谢谢您的意见反馈！");
+        }
+
+        private void button_attachment_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                isAttExisted = true;
+                attachment = openFileDialog1.FileName;
+                textBox_attachment.Text = attachment;
+            }
+            else
+                return;
         }
         
     }
