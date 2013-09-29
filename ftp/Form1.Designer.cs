@@ -33,6 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button_submit = new System.Windows.Forms.Button();
+            this.button_attachment = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox_attachment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_title
@@ -51,7 +54,7 @@
             this.textBox_content.Location = new System.Drawing.Point(93, 57);
             this.textBox_content.Multiline = true;
             this.textBox_content.Name = "textBox_content";
-            this.textBox_content.Size = new System.Drawing.Size(341, 159);
+            this.textBox_content.Size = new System.Drawing.Size(341, 139);
             this.textBox_content.TabIndex = 1;
             // 
             // label1
@@ -76,7 +79,7 @@
             // 
             // button_submit
             // 
-            this.button_submit.Location = new System.Drawing.Point(209, 229);
+            this.button_submit.Location = new System.Drawing.Point(211, 232);
             this.button_submit.Name = "button_submit";
             this.button_submit.Size = new System.Drawing.Size(87, 34);
             this.button_submit.TabIndex = 4;
@@ -84,11 +87,36 @@
             this.button_submit.UseVisualStyleBackColor = true;
             this.button_submit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button_attachment
+            // 
+            this.button_attachment.Location = new System.Drawing.Point(12, 201);
+            this.button_attachment.Name = "button_attachment";
+            this.button_attachment.Size = new System.Drawing.Size(68, 26);
+            this.button_attachment.TabIndex = 5;
+            this.button_attachment.Text = "添加附件";
+            this.button_attachment.UseVisualStyleBackColor = true;
+            this.button_attachment.Click += new System.EventHandler(this.button_attachment_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // textBox_attachment
+            // 
+            this.textBox_attachment.BackColor = System.Drawing.Color.White;
+            this.textBox_attachment.Location = new System.Drawing.Point(93, 205);
+            this.textBox_attachment.Name = "textBox_attachment";
+            this.textBox_attachment.ReadOnly = true;
+            this.textBox_attachment.Size = new System.Drawing.Size(340, 21);
+            this.textBox_attachment.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 275);
+            this.ClientSize = new System.Drawing.Size(488, 278);
+            this.Controls.Add(this.textBox_attachment);
+            this.Controls.Add(this.button_attachment);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -108,6 +136,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_submit;
+        private System.Windows.Forms.Button button_attachment;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBox_attachment;
     }
 }
 
